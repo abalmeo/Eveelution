@@ -1,12 +1,11 @@
 
 //Variables
-var gemNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 var wins = 0; 
 var losses = 0; 
-var gemOne = [];
-var gemTwo = [];
-var gemThree = [];
-var gemFour = [];
+var gemOne = 0;
+var gemTwo = 0;
+var gemThree = 0;
+var gemFour = 0;
 var playerScore =0;
 var computerScore = 0;
 
@@ -15,51 +14,86 @@ var computerScore = 0;
     //document.getElementById("loss-counter").innerHTML = losses;
 
 //Object Functions
-    // Chooses a number between 1 and 12
-        function randomizeGemNumber(array) {
-        var array = Math.floor(Math.random()*12)+1
-        console.log(array);  
-        }
-    // Adds one to wins or losses
-        function incrementByOne(addsOneToScore)
-        {
-            addsOnetoScore++;
-        }
-    //on click event for Gems
-        function clickOnGem() {
-            document.onkeyup = function(userSelection) {
-                var userSelection = event.key;
-                console.log(userSelection);
+    // Setting up a random nunmber between 1 and 12 and assigning to gem 
+    function reset(){
+        var computerRandomizer = Math.floor(Math.random()*56)+35
+        var one = Math.floor(Math.random()*12)+1
+        var two = Math.floor(Math.random()*12)+1
+        var three = Math.floor(Math.random()*12)+1
+        var four = Math.floor(Math.random()*12)+1
 
+        computerScore = computerRandomizer 
+        gemOne = one;
+        gemTwo = two; 
+        gemThree = three; 
+        gemFour = four; 
+        playerScore = 0;
 
-            }
-        }
-    //function to start Game
+        console.log(computerScore);
 
-        function startCrystalCollecter() {
-            randomizeGemNumber(gemOne);
-            randomizeGemNumber(gemTwo);
-            randomizeGemNumber(gemThree);
-            randomizeGemNumber(gemFour);
-        }
-    //Event listeners for clicking on gem 
-        function clickingOnGem(gem){}
-        /*
-            document.getElementById("gem").addEventListener("click","addToScore");
-                function addToScore(){
-                    playerScore = playerScore +gem;
-                    console.log(playerScore);
-                } 
-        */
-        clickonGem(a); 
-
-
-
-
-/* FIx start game
-clickOnGem(
-    startCrystalCollecter()
-
-)
-
+/*      console.log(gemOne);
+        console.log(gemTwo);
+        console.log(gemThree);
+        console.log(gemFour);
 */
+    
+    };
+    
+    reset(); 
+     
+    //win loss tracker--------------------------------------
+    function winLossTracker(){
+        if(playerScore > computerScore){
+            losses++;
+                console.log("You lose")
+                console.log("losses " + losses); 
+                reset(); 
+
+        }
+        else if(playerScore === computerScore){
+            wins++;
+                console.log("You Win")
+                console.log("wins " +wins)
+                reset(); 
+        }
+        else{
+            console.log("Keep Playing"); 
+        }
+    };
+
+
+    //Event listeners for clicking on gem 
+
+    var element = document.getElementById("gemone");
+    element.onclick = (function() {
+        playerScore = gemOne + playerScore;
+        console.log("Current Score: " + playerScore);
+        winLossTracker();
+        if(playerScore===computerScore){
+            console.log('you get eevee');
+        }
+        
+    });
+
+    var element = document.getElementById("gemtwo");
+    element.onclick = (function() {
+        playerScore = gemTwo + playerScore;
+        console.log("Current Score: " + playerScore);
+        winLossTracker();
+    });
+
+    var element = document.getElementById("gemthree");
+    element.onclick = (function() {
+        playerScore = gemThree + playerScore;
+        console.log("Current Score: " + playerScore);
+        winLossTracker();
+    });
+
+    var element = document.getElementById("gemfour");
+    element.onclick = (function() {
+        playerScore = gemFour + playerScore;
+        console.log("Current Score: " + playerScore);
+        winLossTracker();
+    });
+
+
