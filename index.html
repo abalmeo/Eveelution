@@ -19,17 +19,33 @@
 </header>
 
 <body>
-<!--Instructions -->
-    <div id = "instructions" class = "text-center">
-            <img src ="assets/images/Eevee.png">
-        <br>
-        Blah blah blah
-        <br>
-        Blah blah blah
-        <br>
-        Blah blah blah
-        <br>
-        Blah blah blah
+    <div id = "toprow" class = "row">
+    <!--Player and Computer score --> 
+        <div id = "score" class = "col-3 col-md-2">
+            <div id = "playerscore">
+            Your Score:
+
+            </div>
+            <div id ="computerscore" class = "col-3 col-md-2">
+            Target Score:
+            </div>
+        </div>
+    <!--Instructions -->
+        <div id = "instructions" class = "text-center" "col-3 col-md-6">
+                <img id="eevee" src ="assets/images/Eevee.png">
+            <br>
+            You will be given a random number at the start of the game. 
+            <br>
+            There are five evolution stones below. By clicking on a crystal
+            you will add a specific amount of points to your total score
+            <br>
+            You win the game by matching your total score to the target score, 
+            you lose the game if your total score goes above the random number
+            <br>
+            The value of each crystal is hidden and when a specific crystal is cliked, where
+            your score reaches the target, your Eevee will transform. 
+            
+        </div>
     </div>
 <!--Computer score -->
     <div id ="computerScore">
@@ -49,26 +65,30 @@
         </div>
     
 <!-- Gems -->
-    <div id = "gems" class = "row">
+    <div id = "gemsrow" class = "row">
 
-        <div class = "col-6 col-sm-3"> 
-            <button id ="gemone"><img src ="assets/images/Thunderstone.png"></button>
-
+        <div class = "col-3 col-sm-2"> 
+            <button id ="gemone"><img id ="one" src ="assets/images/Thunderstone2.jpg"></button>
         </div>
-        <div id ="gemtwo" class = "col-6 col-sm-3">
-            <button><img src ="assets/images/Firestone.png"></button>
+
+        <div id ="gemtwo" class = "col-3 col-sm-2">
+            <button><img id ="two" src ="assets/images/Firestone2.jpg"></button>
             <!-- force next columns to break to new line --> 
-        <divclass ="w-100"></div>
+        <!--<div class ="w-100"></div> -->
 
         </div>
-        <div id ="gemthree" class = "col-6 col-sm-3">
-            <button><img src ="assets/images/Waterstone.png"></button>
+        <div id ="gemthree" class = "col-3 col-sm-2">
+            <button><img id= "three" src ="assets/images/Waterstone2.jpg"></button>        
+        </div>
+        <div id ="gemfour" class = "col-3 col-sm-2">
+            <button><img id= "four" src ="assets/images/Moonstone.jpg"></button>
             
         </div>
-        <div id ="gemfour" class = "col-6 col-sm-3">
-            <button>d</button>
-            
+        <div id ="gemfive" class = "col-3 col-sm-2">
+            <button><img id= "five" src ="assets/images/Sunstone.jpg"></button>
+                
         </div>
+        
     </div>
 
 <!-- Player score-->

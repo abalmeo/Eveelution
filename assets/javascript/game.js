@@ -6,6 +6,7 @@ var gemOne = 0;
 var gemTwo = 0;
 var gemThree = 0;
 var gemFour = 0;
+var gemFive =0;
 var playerScore =0;
 var computerScore = 0;
 
@@ -21,12 +22,14 @@ var computerScore = 0;
         var two = Math.floor(Math.random()*12)+1
         var three = Math.floor(Math.random()*12)+1
         var four = Math.floor(Math.random()*12)+1
+        var five = Math.floor(Math.random()*12)+1
 
         computerScore = computerRandomizer 
         gemOne = one;
         gemTwo = two; 
         gemThree = three; 
         gemFour = four; 
+        gemFive = five; 
         playerScore = 0;
 
         console.log(computerScore);
@@ -69,9 +72,6 @@ var computerScore = 0;
         playerScore = gemOne + playerScore;
         console.log("Current Score: " + playerScore);
         winLossTracker();
-        if(playerScore===computerScore){
-            console.log('you get eevee');
-        }
         
     });
 
@@ -92,6 +92,13 @@ var computerScore = 0;
     var element = document.getElementById("gemfour");
     element.onclick = (function() {
         playerScore = gemFour + playerScore;
+        console.log("Current Score: " + playerScore);
+        winLossTracker();
+    });
+
+    var element = document.getElementById("gemfive");
+    element.onclick = (function() {
+        playerScore = gemFive + playerScore;
         console.log("Current Score: " + playerScore);
         winLossTracker();
     });
