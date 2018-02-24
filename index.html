@@ -2,11 +2,11 @@
 <html lang="en-us">
 
 <head>
-  <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Coding Bootcamp - Hangman</title>
   <!-- Bootstrap is used to make game look nicer -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type"text/css" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 </head>
 
@@ -19,32 +19,40 @@
 </header>
 
 <body>
-    <div id = "toprow" class = "row">
-    <!--Player and Computer score --> 
-        <div id = "score" class = "col-3 col-md-2">
-            <div id = "playerscore">
-            Your Score:
-
+    <div class="container">
+        <div id="toprow" class="row justify-content-md-center align-items-center">
+        <!--Player and Computer score --> 
+            <div id = "score" class ="col-3">
+                <div id = "playerscore">
+                Your Score:
+                </div>
+                <div id ="computerscore">
+                Target Score:
+                </div>
+                <div id ="wins">
+                Wins:
+                </div>
+                <div id ="losses">
+                Losses:
+                </div>
             </div>
-            <div id ="computerscore" class = "col-3 col-md-2">
-            Target Score:
-            </div>
-        </div>
-    <!--Instructions -->
-        <div id = "instructions" class = "text-center" "col-3 col-md-6">
+        <!--Instructions -->
+            <div id = "instructions" class = "text-center col-6">
                 <img id="eevee" src ="assets/images/Eevee.png">
-            <br>
-            You will be given a random number at the start of the game. 
-            <br>
-            There are five evolution stones below. By clicking on a crystal
-            you will add a specific amount of points to your total score
-            <br>
-            You win the game by matching your total score to the target score, 
-            you lose the game if your total score goes above the random number
-            <br>
-            The value of each crystal is hidden and when a specific crystal is cliked, where
-            your score reaches the target, your Eevee will transform. 
-            
+            </div>
+            <div class="col-12">
+                <br>
+                You will be given a random number at the start of the game. 
+                <br>
+                There are five evolution stones below. By clicking on a crystal
+                you will add a specific amount of points to your total score
+                <br>
+                You win the game by matching your total score to the target score, 
+                you lose the game if your total score goes above the random number
+                <br>
+                The value of each crystal is hidden and when a specific crystal is cliked, where
+                your score reaches the target, your Eevee will transform. 
+            </div>
         </div>
     </div>
 <!--Computer score -->
@@ -63,32 +71,27 @@
             <div id="lose-counter">
             </div>
         </div>
+    </section>
     
 <!-- Gems -->
-    <div id = "gemsrow" class = "row">
-
-        <div class = "col-3 col-sm-2"> 
-            <button id ="gemone"><img id ="one" src ="assets/images/Thunderstone2.jpg"></button>
+    <div class="container">
+        <div id="gemsrow" class = "row justify-content-center">
+            <div id="gemone" class="col-2"> 
+                <button><img id="one" class="button-image" src="assets/images/Thunderstone2.jpg"></button>
+            </div>
+            <div id="gemtwo" class="col-2">
+                <button><img id="two" class="button-image" src="assets/images/Firestone2.jpg"></button>
+            </div>
+            <div id ="gemthree" class = "col-2">
+                <button><img id= "three" class="button-image" src ="assets/images/Waterstone2.jpg"></button>        
+            </div>
+            <div id ="gemfour" class = "col-2">
+                <button><img id= "four" class="button-image" src ="assets/images/Moonstone.jpg"></button>
+            </div>
+            <div id ="gemfive" class = "col-2">
+                <button><img id= "five" class="button-image" src ="assets/images/Sunstone.jpg"></button>  
+            </div>
         </div>
-
-        <div id ="gemtwo" class = "col-3 col-sm-2">
-            <button><img id ="two" src ="assets/images/Firestone2.jpg"></button>
-            <!-- force next columns to break to new line --> 
-        <!--<div class ="w-100"></div> -->
-
-        </div>
-        <div id ="gemthree" class = "col-3 col-sm-2">
-            <button><img id= "three" src ="assets/images/Waterstone2.jpg"></button>        
-        </div>
-        <div id ="gemfour" class = "col-3 col-sm-2">
-            <button><img id= "four" src ="assets/images/Moonstone.jpg"></button>
-            
-        </div>
-        <div id ="gemfive" class = "col-3 col-sm-2">
-            <button><img id= "five" src ="assets/images/Sunstone.jpg"></button>
-                
-        </div>
-        
     </div>
 
 <!-- Player score-->

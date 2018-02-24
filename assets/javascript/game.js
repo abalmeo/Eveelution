@@ -48,20 +48,23 @@ var computerScore = 0;
     function winLossTracker(){
         if(playerScore > computerScore){
             losses++;
-                console.log("You lose")
-                console.log("losses " + losses); 
-                reset(); 
-
+            console.log("You lose")
+            console.log("losses " + losses); 
+            addToHTML();
+            reset(); 
         }
         else if(playerScore === computerScore){
             wins++;
-                console.log("You Win")
-                console.log("wins " +wins)
-                reset(); 
+            console.log("You Win")
+            console.log("wins " +wins)
+            addToHTML();
+            reset(); 
         }
         else{
             console.log("Keep Playing"); 
         }
+        addToHTML();
+        
     };
 
 
@@ -102,5 +105,13 @@ var computerScore = 0;
         console.log("Current Score: " + playerScore);
         winLossTracker();
     });
+
+    function addToHTML(){
+        console.log('losses add to html:', losses)
+    document.getElementById("wins").innerHTML = "Wins "+wins;
+    document.getElementById("losses").innerHTML = "Losses "+losses;
+    document.getElementById("playerscore").innerHTML = "Score "+playerScore;
+    document.getElementById("computerscore").innerHTML = "Target Score "+computerScore;
+    }
 
 
