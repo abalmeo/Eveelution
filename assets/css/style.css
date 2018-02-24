@@ -2,12 +2,16 @@
     width: 100%;
 }
 
-#eevee{
+.pokemon{
     width: 100%;
     max-width: 350px;
+    margin: 0 auto; 
 }
 #gemsrow{
     align-content: center;
+}
+.none{
+    display: none; 
 }
 
 

@@ -33,19 +33,12 @@ var computerScore = 0;
         playerScore = 0;
 
         console.log(computerScore);
-
-/*      console.log(gemOne);
-        console.log(gemTwo);
-        console.log(gemThree);
-        console.log(gemFour);
-*/
-    
     };
     
     reset(); 
      
     //win loss tracker--------------------------------------
-    function winLossTracker(){
+    function winLossTracker(pokemon){
         if(playerScore > computerScore){
             losses++;
             console.log("You lose")
@@ -57,6 +50,8 @@ var computerScore = 0;
             wins++;
             console.log("You Win")
             console.log("wins " +wins)
+            $('.pokemon').addClass('none');
+            $('#'+pokemon).removeClass('none');
             addToHTML();
             reset(); 
         }
@@ -72,38 +67,43 @@ var computerScore = 0;
 
     var element = document.getElementById("gemone");
     element.onclick = (function() {
+        var pokemon = 'jolteon';
         playerScore = gemOne + playerScore;
         console.log("Current Score: " + playerScore);
-        winLossTracker();
+        winLossTracker(pokemon);
         
     });
 
     var element = document.getElementById("gemtwo");
     element.onclick = (function() {
+        var pokemon = 'flareon';
         playerScore = gemTwo + playerScore;
         console.log("Current Score: " + playerScore);
-        winLossTracker();
+        winLossTracker(pokemon);
     });
 
     var element = document.getElementById("gemthree");
     element.onclick = (function() {
+        var pokemon = 'vaporeon';
         playerScore = gemThree + playerScore;
         console.log("Current Score: " + playerScore);
-        winLossTracker();
+        winLossTracker(pokemon);
     });
 
     var element = document.getElementById("gemfour");
     element.onclick = (function() {
+        var pokemon = 'umbreon';
         playerScore = gemFour + playerScore;
         console.log("Current Score: " + playerScore);
-        winLossTracker();
+        winLossTracker(pokemon);
     });
 
     var element = document.getElementById("gemfive");
     element.onclick = (function() {
+        var pokemon = 'espeon';
         playerScore = gemFive + playerScore;
         console.log("Current Score: " + playerScore);
-        winLossTracker();
+        winLossTracker(pokemon);
     });
 
     function addToHTML(){
@@ -113,5 +113,4 @@ var computerScore = 0;
     document.getElementById("playerscore").innerHTML = "Score "+playerScore;
     document.getElementById("computerscore").innerHTML = "Target Score "+computerScore;
     }
-
 
