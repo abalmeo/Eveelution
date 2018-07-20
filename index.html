@@ -23,7 +23,7 @@
     <div class="container">
         <div id="toprow" class="row justify-content-md-center align-items-center">
         <!--Player and Computer score --> 
-            <div id = "score" class ="col-3">
+            <div id = "score" class ="bold col-3">
                 <div id = "playerscore">
                 Your Score:
                 </div>
@@ -47,17 +47,15 @@
                 <img id="flareon" class="pokemon none" src="assets/images/Flareon.png">
             </div>
             <div class="col-12">
-                <br>
-                You will be given a random number at the start of the game. 
-                <br>
-                There are five evolution stones below. By clicking on a crystal
-                you will add a specific amount of points to your total score.
-                <br>
-                You win the game by matching your total score to the target score, 
-                you lose the game if your total score goes above the random number.
-                <br>
-                The value of each crystal is hidden and when a specific crystal is clicked, where
-                your score reaches the target, your Eevee will transform. 
+                <div class="container bold">
+                    You will be given a random number as the target score at the start of the game. 
+                    There are five evolution stones below with hidden values. By clicking on a stone 
+                    you will add the value of the stone to your total score.
+                    You win the game by matching your total score to the target score, 
+                    you lose the game if your total score goes above the random number. Evee will transform
+                    only if you reach the target score and will transform to one of the evolutions 
+                    based on the stone you choose. 
+            </div>
             </div>
         </div>
     </div>
@@ -72,19 +70,19 @@
 <!-- Gems -->
     <div class="container">
         <div id="gemsrow" class = "row justify-content-center">
-            <div id="gemone" class="col-2"> 
+            <div id="gemone" class="col-2 gem"> 
                 <button><img id="one" class="button-image" src="assets/images/Thunderstone2.jpg"></button>
             </div>
-            <div id="gemtwo" class="col-2">
+            <div id="gemtwo" class="col-2 gem">
                 <button><img id="two" class="button-image" src="assets/images/Firestone2.jpg"></button>
             </div>
-            <div id ="gemthree" class = "col-2">
+            <div id ="gemthree" class = "col-2 gem">
                 <button><img id= "three" class="button-image" src ="assets/images/Waterstone2.jpg"></button>        
             </div>
-            <div id ="gemfour" class = "col-2">
+            <div id ="gemfour" class = "col-2 gem">
                 <button><img id= "four" class="button-image" src ="assets/images/Moonstone.jpg"></button>
             </div>
-            <div id ="gemfive" class = "col-2">
+            <div id ="gemfive" class = "col-2 gem">
                 <button><img id= "five" class="button-image" src ="assets/images/Sunstone.jpg"></button>  
             </div>
         </div>

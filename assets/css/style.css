@@ -1,11 +1,23 @@
+body{
+    background: url("../images/mainbackground.png");
+    margin: 0;
+    width:100%;
+    background-attachment: fixed;
+}
 .button-image{
     width: 100%;
 }
 
+#eevee{
+    max-width: 200px; 
+}
 .pokemon{
     width: 100%;
     max-width: 350px;
     margin: 0 auto; 
+}
+.gem{
+ max-width:200px;   
 }
 #gemsrow{
     align-content: center;
@@ -14,4 +26,7 @@
     display: none; 
 }
 
+.bold{
+    font-weight: bold;
+}
 
