@@ -1,11 +1,15 @@
 body{
-    background: url("../images/mainbackground.png");
-    margin: 0;
-    width:100%;
+    background: url("../images/eeveebackground.png");
+    background-size: 1500px; 
+    max-width:100%;
+    max-height: 100%;
     background-attachment: fixed;
+    color: rgba(245, 189, 126, 0.986);
 }
 .button-image{
     width: 100%;
+    padding: 0%; 
+    
 }
 
 #eevee{
@@ -17,10 +21,14 @@ body{
     margin: 0 auto; 
 }
 .gem{
- max-width:200px;   
+ max-width:180px; 
+ padding: 0%; 
+ 
 }
 #gemsrow{
     align-content: center;
+    padding-left: 0%;
+    
 }
 .none{
     display: none; 
@@ -28,5 +36,9 @@ body{
 
 .bold{
     font-weight: bold;
+}
+
+#rules{
+    margin-bottom: 50px; 
 }
 
